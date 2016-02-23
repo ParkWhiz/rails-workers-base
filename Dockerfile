@@ -2,7 +2,6 @@ FROM alpine:3.2
 MAINTAINER ParkWhiz <dev@parkwhiz.com>
 
 ENV RUBY_VERSION 2.2.4
-ENV RAKE_VERSION 1.5.0
 ENV RUBYGEMS_VERSION 2.4.8
 ENV BUNDLER_VERSION 1.11.2
 ENV RAILS_VERSION 4.2.5.1
@@ -34,8 +33,8 @@ RUN apk update && \
     gem install nokogiri -v 1.6.7 --no-rdoc --no-ri --no-doc -- --use-system-libraries && \
     gem install rb-readline --no-rdoc --no-ri --no-doc && \
     gem install json -v 1.8.3 --no-rdoc --no-ri --no-doc && \
-    gem install rake -v "$RAKE_VERSION" --no-rdoc --no-ri --no-doc &&\
     gem install rails -v "$RAILS_VERSION" --no-rdoc --no-ri --no-doc &&\
+    gem install redis --no-rdoc --no-ri --no-doc && \
     gem install sidekiq -v 4.1.0 --no-rdoc --no-ri --no-doc && \
     mkdir -p /usr/app
 
