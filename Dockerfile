@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine:3.22.1
 MAINTAINER ParkWhiz <dev@parkwhiz.com>
 
 ENV RUBY_VERSION 2.2.4
